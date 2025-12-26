@@ -24,11 +24,11 @@
     "video",
     "vfx"
   ],
-  "author": "",
+  "author": "Story by Numbers",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/storybynumbers/remotion-glitch-effect"
   },
   "peerDependencies": {
     "react": "^18.0.0",
