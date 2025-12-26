@@ -1,24 +1,34 @@
-# @storybynumbers/remotion-glitch-effect
+# @storybynumbers_/remotion-glitch-effect
 
 Digital glitch effect with RGB channel splitting for Remotion.
 
 ## Install
 
 ```bash
-npm install @storybynumbers/remotion-glitch-effect
+npm install @storybynumbers_/remotion-glitch-effect
 ```
 
-## Quick use
+## Minimal use
 
 ```tsx
-import { DigitalGlitchRGB } from '@storybynumbers/remotion-glitch-effect';
+import { DigitalGlitchRGB } from '@storybynumbers_/remotion-glitch-effect';
 
-<DigitalGlitchRGB splitAmount={5} blurAmount={0.8} burstSpacing={28}>
+<DigitalGlitchRGB>
   <YourContent />
 </DigitalGlitchRGB>
 ```
 
-## Props (core)
+## How it’s made (overview)
+
+- Schedules sparse “bursts” up front using Remotion’s deterministic `random()` and a `seed`.
+- During a burst, computes a quick intensity envelope and varies offsets per-frame (still deterministic).
+- Renders three layers (R/G/B) and uses SVG filters: `feColorMatrix` to isolate channels, `feOffset` for separation, optional `feGaussianBlur` for softness.
+- Composites layers with `mixBlendMode: 'screen'`.
+- Outside bursts, renders children directly (no filters applied).
+
+Implementation: `lib/DigitalGlitchRGB.tsx`.
+
+## Props
 
 - `splitAmount` (number, default 4) RGB offset in pixels
 - `blurAmount` (number, default 0.8) Blur radius

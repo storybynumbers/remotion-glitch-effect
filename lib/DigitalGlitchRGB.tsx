@@ -1,5 +1,5 @@
 import React, { useMemo, useId } from 'react';
-import { AbsoluteFill, random, useCurrentFrame } from 'remotion';
+import { AbsoluteFill, random, useCurrentFrame, useVideoConfig } from 'remotion';
 
 interface GlitchBurst {
   startFrame: number;
@@ -103,6 +103,7 @@ export const DigitalGlitchRGB: React.FC<DigitalGlitchRGBProps> = ({
   seed = 42,
 }) => {
   const frame = useCurrentFrame();
+  const { durationInFrames } = useVideoConfig();
   const reactId = useId();
 
   const filterId = useMemo(
@@ -111,10 +112,9 @@ export const DigitalGlitchRGB: React.FC<DigitalGlitchRGBProps> = ({
   );
 
   // Pre-generate burst schedule (memoized, doesn't change during playback)
-  // Assume max 600 frames (~20s at 30fps) for generation
   const bursts = useMemo(
-    () => generateBursts(600, burstSpacing, burstDuration, seed),
-    [burstSpacing, burstDuration, seed]
+    () => generateBursts(durationInFrames, burstSpacing, burstDuration, seed),
+    [durationInFrames, burstSpacing, burstDuration, seed]
   );
 
   // Get current glitch state

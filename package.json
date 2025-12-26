@@ -1,6 +1,6 @@
 {
-  "name": "@storybynumbers/remotion-glitch-effect",
-  "version": "1.0.0",
+  "name": "@storybynumbers_/remotion-glitch-effect",
+  "version": "1.1.0",
   "description": "Digital glitch effect with RGB channel splitting for Remotion",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
