@@ -1,17 +1,17 @@
-# remotion-digital-glitch-rgb
+# @storybynumbers/remotion-glitch-effect
 
 Digital glitch effect with RGB channel splitting for Remotion.
 
 ## Installation
 
 ```bash
-npm install remotion-digital-glitch-rgb
+npm install @storybynumbers/remotion-glitch-effect
 ```
 
 ## Usage
 
 ```tsx
-import { DigitalGlitchRGB } from 'remotion-digital-glitch-rgb';
+import { DigitalGlitchRGB } from '@storybynumbers/remotion-glitch-effect';
 
 <DigitalGlitchRGB
   splitAmount={5}

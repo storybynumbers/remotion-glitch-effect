@@ -1,5 +1,5 @@
 {
-  "name": "remotion-digital-glitch-rgb",
+  "name": "@storybynumbers/remotion-glitch-effect",
   "version": "1.0.0",
   "description": "Digital glitch effect with RGB channel splitting for Remotion",
   "main": "dist/index.js",
@@ -28,7 +28,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/storybynumbers/remotion-glitch-effect"
+    "url": "git+https://github.com/storybynumbers/remotion-glitch-effect.git"
   },
   "peerDependencies": {
     "react": "^18.0.0",
