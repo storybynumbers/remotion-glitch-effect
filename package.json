@@ -1,0 +1,46 @@
+{
+  "name": "remotion-digital-glitch-rgb",
+  "version": "1.0.0",
+  "description": "Digital glitch effect with RGB channel splitting for Remotion",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.npm.md"
+  ],
+  "scripts": {
+    "start": "remotion preview src/index.tsx",
+    "preview": "remotion preview src/index.tsx",
+    "render": "remotion render src/index.tsx",
+    "build": "remotion build src/index.tsx",
+    "build:lib": "tsc -p tsconfig.lib.json",
+    "prepublishOnly": "npm run build:lib"
+  },
+  "keywords": [
+    "remotion",
+    "glitch",
+    "rgb",
+    "effect",
+    "video",
+    "vfx"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@types/react": "^18.2.22",
+    "@types/react-dom": "^18.2.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remotion": "^4.0.0",
+    "typescript": "^5.3.3"
+  }
+}
